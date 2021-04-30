@@ -16,12 +16,6 @@ class GooglePage:
         self.page.click('input[value="Pesquisa Google"]')
 
     def Validate_search(self):
-        answer = self.page.is_visible('text=Facebook – entre ou cadastre-se')
+        answer = self.page.wait_for_selector('text=Facebook – entre ou cadastre-se',timeout=30000,state="visible")
         assert answer
         self.page.close()
-
-
-if __name__ == '__main__':
-    GP = GooglePage()
-    GP.go_to_page('https://www.google.com/')
-    GP.search_google('facebook')
