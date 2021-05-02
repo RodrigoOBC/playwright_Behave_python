@@ -1,0 +1,12 @@
+allure-behave==2.8.40
+allure-python-commons==2.8.40
+attrs==20.3.0
+behave==1.2.6
+greenlet==1.0.0
+parse==1.19.0
+parse-type==0.5.2
+playwright==1.10.0
+pluggy==0.13.1
+pyee==8.1.0
+six==1.15.0
+typing-extensions==3.7.4.3

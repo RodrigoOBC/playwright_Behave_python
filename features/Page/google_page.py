@@ -1,21 +1,26 @@
 import asyncio
 from playwright.sync_api import sync_playwright
+from .Base_page import BasePage
 
 
 class GooglePage:
-    def __init__(self):
-        playwright = sync_playwright().start()
-        self.browser = playwright.chromium.launch(headless=False)
-        self.page = self.browser.new_page()
+    def __init__(self, Page):
+        self.Page = Page
 
     def go_to_page(self, url):
-        self.page.goto(url)
+        self.Page.goto(url)
 
     def search_google(self, name):
-        self.page.fill('input[name="q"]', name)
-        self.page.click('input[value="Pesquisa Google"]')
+        self.Page.fill('input[name="q"]', name)
+        self.Page.press('input[name="q"]', "Enter")
 
     def Validate_search(self):
-        answer = self.page.wait_for_selector('text=Facebook – entre ou cadastre-se',timeout=30000,state="visible")
+        answer = self.Page.wait_for_selector('text=Amazon.com.br - Tudo para você de A a Z', timeout=30000,
+                                             state="visible")
         assert answer
-        self.page.close()
+
+    def screenshot(self, name):
+        self.Page.screenshot(path=name, full_page=True)
+
+    def close_brownser(self):
+        self.Page.close()
