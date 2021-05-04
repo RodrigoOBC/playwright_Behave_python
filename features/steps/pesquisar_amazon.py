@@ -8,12 +8,12 @@ GP = GooglePage(Page)
 AP = AmazonPage(Page)
 
 
-@given('que estou na pagina inicial do google')
+@given('que acesso a pagina do google')
 def step_impl(context):
     GP.go_to_page("https://www.google.com/")
 
 
-@when(u'O usuario digita "Amazon" na caixa de pesquisa e aperta ENTER')
+@when(u'pesquiso por "Amazon"')
 def step_impl(context):
     GP.search_google("Amazon")
 
@@ -24,12 +24,12 @@ def step_impl(context):
     GP.screenshot('EvidenciaGoogle.png')
 
 
-@given(u'estou na pagina principal da amazon')
+@given(u'que acesso a pagina principal da amazon')
 def step_impl(context):
     AP.go_to_page()
 
 
-@when(u'O usuario digita "Livro" na caixa de pesquisa e aperta ENTER')
+@when(u'pesquiso "Livro" na Amazon')
 def step_impl(context):
     AP.search_Amazon("Livro")
 
