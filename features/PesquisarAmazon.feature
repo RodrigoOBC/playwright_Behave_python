@@ -5,12 +5,12 @@ Funcionalidade: Pesquisar no Google
 
 
   Cenario: Pesquisar "Amazon" no google
-    Dado que estou na pagina inicial do google
-    Quando O usuario digita "Amazon" na caixa de pesquisa e aperta ENTER
+    Dado que acesso a pagina do google
+    Quando pesquiso por "Amazon"
     Entao resultados relacionados ao "Amazon" são exibidos
 
 
   Cenario: Pesquisar "Livro" na Amazon
-    Dado estou na pagina principal da amazon
-    Quando O usuario digita "Livro" na caixa de pesquisa e aperta ENTER
+    Dado que acesso a pagina principal da amazon
+    Quando pesquiso "Livro" na Amazon
     Entao livros vendidos são exibidos
