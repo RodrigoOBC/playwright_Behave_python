@@ -1,6 +1,7 @@
 import asyncio
 from playwright.sync_api import sync_playwright
 from .Base_page import BasePage
+from features.Page.elements_page.google_elements import google_locations
 
 
 class GooglePage:
@@ -11,11 +12,11 @@ class GooglePage:
         self.Page.goto(url)
 
     def search_google(self, name):
-        self.Page.fill('input[name="q"]', name)
-        self.Page.press('input[name="q"]', "Enter")
+        self.Page.fill(google_locations().CAMPO_BUSCA, name)
+        self.Page.press(google_locations().CAMPO_BUSCA, "Enter")
 
     def Validate_search(self):
-        answer = self.Page.wait_for_selector('text=Amazon.com.br - Tudo para você de A a Z', timeout=30000,
+        answer = self.Page.wait_for_selector(google_locations().TEXTO_RESULTADO, timeout=10000,
                                              state="visible")
         assert answer
 
