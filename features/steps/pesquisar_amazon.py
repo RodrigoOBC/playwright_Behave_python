@@ -1,41 +1,22 @@
 from behave import given, when, then, step
-from features.Page.Base_page import BasePage
-from features.Page.google_page import GooglePage
-from features.Page.amazon_page import AmazonPage
-
-Page = BasePage().page()
-GP = GooglePage(Page)
-AP = AmazonPage(Page)
+from features.data.User import User
 
 
-@given('que acesso a pagina do google')
+
+@given(u'I am main page')
 def step_impl(context):
-    GP.go_to_page("https://www.google.com/")
+    assert True
 
 
-@when(u'pesquiso por "Amazon"')
+@given(u'went the register page')
 def step_impl(context):
-    GP.search_google("Amazon")
+    assert True
 
 
-@then(u'resultados relacionados ao "Amazon" são exibidos')
+@when(u'fill the fild with "{name}" s datas')
+def step_impl(context,name):
+    assert True
+
+@then(u'the mensager "Recebemos os seus dados. Fique de olho na sua caixa de email, pois e em breve retornamos o contato." is displayed')
 def step_impl(context):
-    GP.Validate_search()
-    GP.screenshot('EvidenciaGoogle.png')
-
-
-@given(u'que acesso a pagina principal da amazon')
-def step_impl(context):
-    AP.go_to_page()
-
-
-@when(u'pesquiso "Livro" na Amazon')
-def step_impl(context):
-    AP.search_Amazon("Livro")
-
-
-@then(u'livros vendidos são exibidos')
-def step_impl(context):
-    AP.Validate_search("Livro")
-    AP.screenshot('EvidenciaAmazon.png')
-    AP.close_brownser()
+    assert True

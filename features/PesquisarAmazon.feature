@@ -1,16 +1,19 @@
-#language: pt
-
-Funcionalidade: Pesquisar no Google
-  Sou um usuario e quero fazer uma pesquisa no google
-
-
-  Cenario: Pesquisar "Amazon" no google
-    Dado que acesso a pagina do google
-    Quando pesquiso por "Amazon"
-    Entao resultados relacionados ao "Amazon" são exibidos
+Feature: Create Deliver
+  I'm user and want to register a new user
+  and validate behave's fields
 
 
-  Cenario: Pesquisar "Livro" na Amazon
-    Dado que acesso a pagina principal da amazon
-    Quando pesquiso "Livro" na Amazon
-    Entao livros vendidos são exibidos
+
+  Background:
+    Given I am main page
+    And went the register page
+
+
+  Scenario Outline: Register a new deliver
+    When fill the fild with "<name>" s datas
+    Then the mensager "Recebemos os seus dados. Fique de olho na sua caixa de email, pois e em breve retornamos o contato." is displayed
+    Examples:
+      | name          | CPF         | email                            | whatsapp    | postalcode | number | details | delivery_method | CNH |
+      | Renato Marcos | 01793214719 | renato-mendes76@reisereis.com.br | 22993211693 | 28473970   | 708    | s/n     | Moto            |     |
+      | Mário Pedro   | 87429760732 | mario_assis@dosnu.com.br         | 22996852614 | 28473970   | 889    | teste   | Moto            |     |
+
