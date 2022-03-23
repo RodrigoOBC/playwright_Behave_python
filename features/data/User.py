@@ -8,7 +8,7 @@ class User(object):
             "number": "708",
             "details": "s/n",
             "delivery_method": "Moto",
-            "CNH": "teste"
+            "CNH": "features/images/upload/cnh-digital.jpg"
         },
         "Mário Pedro": {
             "cpf": "87429760732",
@@ -18,7 +18,7 @@ class User(object):
             "number": "889",
             "details": "teste",
             "delivery_method": "Moto",
-            "CNH": "teste"
+            "CNH": "features/images/upload/cnh-digital.jpg"
         },
         "CPF_invalido": {
             "cpf": "874297607A2",
@@ -28,7 +28,7 @@ class User(object):
             "number": "889",
             "details": "teste",
             "delivery_method": "Moto",
-            "CNH": "teste"
+            "CNH": "features/images/upload/cnh-digital.jpg"
         },
         "email_invalido": {
             "cpf": "87429760732",
@@ -38,7 +38,7 @@ class User(object):
             "number": "889",
             "details": "teste",
             "delivery_method": "Moto",
-            "CNH": "teste"
+            "CNH": "features/images/upload/cnh-digital.jpg"
         }
     }
 

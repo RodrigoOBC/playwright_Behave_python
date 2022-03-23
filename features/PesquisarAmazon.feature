@@ -8,7 +8,7 @@ Feature: Create Deliver
     Given I am main page
     And went the register page
 
-
+  @RegisterDeliver
   Scenario Outline: Register a new deliver
     When fill the fild with "<name>" datas
     Then the mensager "Recebemos os seus dados. Fique de olho na sua caixa de email, pois e em breve retornamos o contato." is displayed

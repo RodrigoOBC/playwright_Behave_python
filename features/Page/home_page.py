@@ -1,7 +1,7 @@
 import asyncio
 from playwright.sync_api import sync_playwright
 from .Base_page import BasePage
-from features.Page.elements_page.home_page import homePage
+from features.Page.elements_page.home_elements import homePage
 
 
 class HomePage:
